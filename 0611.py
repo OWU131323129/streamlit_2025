@@ -115,13 +115,13 @@ else:
 
     fig, ax = plt.subplots()
     if monthly_savings_normal > 0:
-        ax.plot(x, y_normal, label="節約なし", color="red")
+        ax.plot(x, y_normal, label="Baseline", color="red")
     if any_checked:
-        ax.plot(x, y_saving, label="節約あり", color="blue")
+        ax.plot(x, y_saving, label="With Savings Efforts", color="blue")
 
-    ax.set_xlabel("月", fontname="Meiryo")
-    ax.set_ylabel("貯金額（円）", fontname="Meiryo")
-    ax.set_title("貯金の推移", fontname="Meiryo")
+    ax.set_xlabel("Month")
+    ax.set_ylabel("Savings(JPY)")
+    ax.set_title("Saving Growth")
     ax.grid(True)
     ax.legend(prop={"family": "Meiryo"})
     ax.ticklabel_format(style='plain', axis='y')
